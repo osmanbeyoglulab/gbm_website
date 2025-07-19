@@ -83,7 +83,7 @@ emoji = "🔹" #"🔸" #"💠" #"🔹" # # #
 # )
 
 # mp_specific_page = st.Page(
-#     page = "views/Metaprogram_centric.py",
+#     page = "views/metaprogram_centric.py",
 #     title = "Metaprogram-Centric Comparison",  #Metaprogram
 #     icon = "📊"   #🌀
 # )
@@ -157,7 +157,7 @@ metaprogram_feature_page = st.Page(
 )
 
 mp_specific_page = st.Page(
-    page = "views/Metaprogram_centric.py",
+    page = "views/metaprogram_centric.py",
     title = "Metaprogram-Centric Comparison",  #Metaprogram
     icon = emoji  
 )
