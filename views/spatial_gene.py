@@ -12,7 +12,7 @@ st.write("")
 
 st.info("Explore the spatial patterns of individual gene expression within glioblastoma tissue sections. Visualize how any gene of interest is localized across the tumor microenvironment, highlighting expression in malignant cells, immune populations, or stromal regions. Use the search box to enter gene symbols and the sample selector to navigate different patient tumors.")
 
-file = open('text_files/spatial_gene_names_10.txt', 'r')
+file = open('text_files/spatial_gene_names.txt', 'r')
 list = file.read().splitlines()
 
 tabs_font_css = """
