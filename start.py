@@ -169,8 +169,8 @@ drug2cell_page = st.Page(
 )
 
 heatmap_gene_correlation_page = st.Page(
-    page = "views/Ligand–Receptor–TF–Pathway_Correlation.py",
-    title = "L-R-TF-Pathway-Drug Correlation Heatmap",  #Correlation heatmaps
+    page = "views/Ligand–Receptor–Pathway–TF_Correlation.py",
+    title = "L-R-Pathway-TF-Drug Correlation Heatmap",  #Correlation heatmaps
     icon = emoji
 )
 
