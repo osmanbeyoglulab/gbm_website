@@ -37,7 +37,7 @@ list = file.read().splitlines()
 option_tf = st.selectbox(
     'TF',
     list) 
-st.image(f'{IMG_REPO}/corr_with_{option}/{option_tf}2.png')
+st.image(f'{IMG_REPO}/corr_with_{option}2/{option_tf}.png')
 
 st.write("")
 option = "pathway"
@@ -46,7 +46,7 @@ list = file.read().splitlines()
 option_pw = st.selectbox(
     'Pathway',
     list) 
-st.image(f'{IMG_REPO}/corr_with_{option}/{option_pw}2.png')
+st.image(f'{IMG_REPO}/corr_with_{option}2/{option_pw}.png')
 
 st.write("")
 option = "drug"
@@ -55,5 +55,5 @@ list = file.read().splitlines()
 option_drug = st.selectbox(
     'Drug',
     list) 
-st.image(f'{IMG_REPO}/corr_with_{option}/{option_drug}2.png')
+st.image(f'{IMG_REPO}/corr_with_{option}2/{option_drug}.png')
 
