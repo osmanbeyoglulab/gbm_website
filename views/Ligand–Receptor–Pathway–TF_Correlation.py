@@ -24,13 +24,13 @@ div[class*="stSelectbox"] label {
 """
 st.write(tabs_font_css, unsafe_allow_html=True)
 
-option_gene = st.selectbox(
-    'Gene',
-    list) 
-st.image(f'{IMG_REPO}/corr_with_{option}/{option_gene}.png')
-# pdf_viewer(input = f'data/correlation_per_gene/{option2}.pdf')
+# option_gene = st.selectbox(
+#     'Gene',
+#     list) 
+# st.image(f'{IMG_REPO}/corr_with_{option}/{option_gene}.png')
+# # pdf_viewer(input = f'data/correlation_per_gene/{option2}.pdf')
 
-st.write("")
+# st.write("")
 option = "tf"
 file = open('text_files/correlation_per_tf_names.txt', 'r')
 list = file.read().splitlines()
