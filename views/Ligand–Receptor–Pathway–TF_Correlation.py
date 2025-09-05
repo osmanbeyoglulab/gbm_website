@@ -9,12 +9,6 @@ st.write("")
 
 st.info("Explore spatial correlations between ligand expression, receptor expression, transcription factor activities, and pathway activities across glioblastoma samples. This helps reveal intercellular signaling and regulatory interactions shaping the tumor microenvironment. Interactive clustered heatmaps display Pearson correlation coefficients, allowing you to identify ligand–receptor–TF–pathway relationships that are conserved or variable across tumors. Use the search and filter options to select genes, TFs, pathways, or drugs, and explore their spatial correlations across different patients.")
 
-
-
-option = "gene"
-file = open('text_files/correlation_per_gene_names.txt', 'r')
-list = file.read().splitlines()
-
 tabs_font_css = """
 <style>
 div[class*="stSelectbox"] label {
@@ -52,6 +46,10 @@ option_drug = st.selectbox(
 st.image(f'{IMG_REPO}/corr_with_{option}2/{option_drug}.png')
 
 st.write("")
+option = "gene"
+file = open('text_files/correlation_per_gene_names.txt', 'r')
+list = file.read().splitlines()
+
 option_gene = st.selectbox(
     'Gene',
     list) 
