@@ -16,7 +16,7 @@ st.write("")
 st.image(img)
 
 st.write("")
-
+st.write("")
 
 # st.markdown('➡️ Read our paper here: https://www.google.com')    
 st.write("Glioblastoma (GBM) presents a formidable challenge in oncology due to its aggressive nature and limited treatment options. The tumor microenvironment (TME) plays a crucial role in shaping cancer phenotypes, including proliferation, invasion, metastasis, and drug resistance. Spatial transcriptomics (ST) technologies provide a promising approach to unravel the complex interactions between tumor cells and their microenvironment. In GBM, the interplay between tumor cells and the immune microenvironment significantly influences disease outcomes.")
