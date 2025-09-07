@@ -6,7 +6,7 @@ import streamlit as st
 #streamlit_analytics.start_tracking()
 #streamlit_analytics.stop_tracking()
 
-img = "./images/GLBGV_1_Graphical_Abstract_22_Aug_2025_clipped.jpg"
+img = "./images/GLBGV_1_Graphical_Abstract_22_Aug_2025_clipped.png"
 
 
 st.markdown("<h2 style='text-align: center;  color: black;'>Spatial Regulatory Landscape of Glioblastoma Tumor Immune Microenvironment", unsafe_allow_html=True)
