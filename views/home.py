@@ -18,6 +18,12 @@ st.image(img)
 st.write("")
 st.write("")
 
-# st.markdown('➡️ Read our paper here: https://www.google.com')    
-st.write("Glioblastoma (GBM) presents a formidable challenge in oncology due to its aggressive nature and limited treatment options. The tumor microenvironment (TME) plays a crucial role in shaping cancer phenotypes, including proliferation, invasion, metastasis, and drug resistance. Spatial transcriptomics (ST) technologies provide a promising approach to unravel the complex interactions between tumor cells and their microenvironment. In GBM, the interplay between tumor cells and the immune microenvironment significantly influences disease outcomes.")
-st.write("In this study, we analyzed publicly available GBM ST datasets to map the regulatory landscape and ligand-receptor interactions within the GBM TME. We provide access to predicted transcription factor and pathway activities, as well as ligand and receptor expression across samples. Our resource holds great promise for enhancing our understanding of GBM biology, identifying novel therapeutic targets, and ultimately improving treatment strategies and patient outcomes for this devastating disease.")
+# st.markdown('➡️ Read our paper here: https://www.google.com')   
+
+desc1 = "Glioblastoma (GBM) presents a formidable challenge in oncology due to its aggressive nature and limited treatment options. The tumor microenvironment (TME) plays a crucial role in shaping cancer phenotypes, including proliferation, invasion, metastasis, and drug resistance. Spatial transcriptomics (ST) technologies provide a promising approach to unravel the complex interactions between tumor cells and their microenvironment. In GBM, the interplay between tumor cells and the immune microenvironment significantly influences disease outcomes."
+desc2 = "In this study, we analyzed publicly available GBM ST datasets to map the regulatory landscape and ligand-receptor interactions within the GBM TME. We provide access to predicted transcription factor and pathway activities, as well as ligand and receptor expression across samples. Our resource holds great promise for enhancing our understanding of GBM biology, identifying novel therapeutic targets, and ultimately improving treatment strategies and patient outcomes for this devastating disease."
+
+st.markdown(f"<p style='text-align: justify; color: black; font-size:18px'>{desc1}</p>", unsafe_allow_html=True) 
+st.markdown(f"<p style='text-align: justify; color: black; font-size:18px'>{desc2}</p>", unsafe_allow_html=True) 
+
+# st.markdown(' Read our paper from here 👉 https://aacrjournals.org/cancerrescommun/article/4/8/2133/747011/Spatial-Landscape-of-Malignant-Pleural-and')    
