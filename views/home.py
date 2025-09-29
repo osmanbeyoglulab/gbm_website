@@ -26,4 +26,6 @@ desc2 = "In this study, we analyzed publicly available GBM ST datasets to map th
 st.markdown(f"<p style='text-align: justify; color: black; font-size:18px'>{desc1}</p>", unsafe_allow_html=True) 
 st.markdown(f"<p style='text-align: justify; color: black; font-size:18px'>{desc2}</p>", unsafe_allow_html=True) 
 
+st.markdown('📚 Read our preprint here! [A Multi-Layered Atlas of Spatial Regulatory Programs and Therapeutic Vulnerabilities in Glioblastoma](https://www.biorxiv.org/content/10.1101/2025.09.27.674707v1)')    
+
 # st.markdown(' Read our paper from here 👉 https://aacrjournals.org/cancerrescommun/article/4/8/2133/747011/Spatial-Landscape-of-Malignant-Pleural-and')    
