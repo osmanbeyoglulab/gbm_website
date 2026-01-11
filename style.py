@@ -46,21 +46,62 @@ page_style = """
     </style>
 """
 
-def define_layout(max_width, padding_top='0rem', padding_right='0rem', padding_left='0rem', padding_bottom='0rem'):
+# def define_layout(max_width, padding_top='0rem', padding_right='0rem', padding_left='0rem', padding_bottom='0rem'):
 
 
-    st.markdown(
-        f"""
-        <style>
-            .appview-container .main .block-container{{
-                max-width: {max_width};
-                padding-top: {padding_top};
-                padding-right: {padding_right};
-                padding-left: {padding_left};
-                padding-bottom: {padding_bottom};
-            }}
+#     st.markdown(
+#         f"""
+#         <style>
+#             .appview-container .main .block-container{{
+#                 max-width: {max_width};
+#                 padding-top: {padding_top};
+#                 padding-right: {padding_right};
+#                 padding-left: {padding_left};
+#                 padding-bottom: {padding_bottom};
+#             }}
           
+#         </style>
+#         """,
+#         unsafe_allow_html=True,
+#     )
+def define_layout(max_width='95%', padding_top='1rem', padding_right='2rem', padding_left='2rem', padding_bottom='0rem'):
+    """
+    Define responsive layout that works with layout="wide"
+    """
+    st.markdown(f"""
+        <style>
+        /* Target the main block container in wide mode */
+        section.main > div {{
+            max-width: {max_width};
+            padding-top: {padding_top};
+            padding-right: {padding_right};
+            padding-left: {padding_left};
+            padding-bottom: {padding_bottom};
+        }}
+        
+        /* Alternative selector for block container */
+        .block-container {{
+            max-width: {max_width} !important;
+            padding-top: {padding_top} !important;
+            padding-right: {padding_right} !important;
+            padding-left: {padding_left} !important;
+            padding-bottom: {padding_bottom} !important;
+        }}
+        
+        /* Ensure content doesn't exceed max width */
+        section.main > div:has(> .block-container) {{
+            max-width: {max_width};
+            margin: 0 auto;
+        }}
+        
+        /* Make all components responsive within the constrained width */
+        .stAlert,
+        .stDataFrame,
+        .stPlotlyChart,
+        div[data-testid="stAlert"],
+        div[data-testid="stDataFrame"],
+        div[data-testid="stPlotlyChart"] {{
+            width: 100% !important;
+        }}
         </style>
-        """,
-        unsafe_allow_html=True,
-    )
+        """, unsafe_allow_html=True)
