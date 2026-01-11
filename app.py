@@ -14,6 +14,7 @@ st.set_page_config(
         page_title='GBM',
         page_icon= "./logo/gbm_ribbon.png",
         initial_sidebar_state="expanded",
+        layout="wide" 
 )
 
 # max_width_str = f"max-width: {80}%;"
