@@ -46,28 +46,8 @@ page_style = """
     </style>
 """
 
-# def define_layout(max_width, padding_top='0rem', padding_right='0rem', padding_left='0rem', padding_bottom='0rem'):
-
-
-#     st.markdown(
-#         f"""
-#         <style>
-#             .appview-container .main .block-container{{
-#                 max-width: {max_width};
-#                 padding-top: {padding_top};
-#                 padding-right: {padding_right};
-#                 padding-left: {padding_left};
-#                 padding-bottom: {padding_bottom};
-#             }}
-          
-#         </style>
-#         """,
-#         unsafe_allow_html=True,
-#     )
 def define_layout(max_width='95%', padding_top='1rem', padding_right='2rem', padding_left='2rem', padding_bottom='0rem'):
-    """
-    Define responsive layout that works with layout="wide"
-    """
+   
     st.markdown(f"""
         <style>
         /* Target the main block container in wide mode */
