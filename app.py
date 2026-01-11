@@ -208,16 +208,35 @@ citation_page = st.Page(
 
 # -- NAVIGATION --
 
+# pg = st.navigation(
+#     {
+#         "": [home_page, datasets_page],
+#         "Analysis of Individual Samples": [metaprogram_page, metaprogram_feature_page, gene_page, s_tf_page, s_pathway_page , drug2cell_page],  # ligand_page,
+#         "Comparison Across Samples": [mp_specific_page,  heatmap_gene_correlation_page], 
+#         "Resources": [citation_page, contact_page]
+#     }
+# )
+
+# pg.run()
+
 pg = st.navigation(
     {
         "": [home_page, datasets_page],
-        "Analysis of Individual Samples": [metaprogram_page, metaprogram_feature_page, gene_page, s_tf_page, s_pathway_page , drug2cell_page],  # ligand_page,
+        "Analysis of Individual Samples": [metaprogram_page, metaprogram_feature_page, gene_page, s_tf_page, s_pathway_page , drug2cell_page],
         "Comparison Across Samples": [mp_specific_page,  heatmap_gene_correlation_page], 
         "Resources": [citation_page, contact_page]
     }
 )
 
+# Safe default attribute check
+for page_group, pages in pg.pages.items():
+    for page in pages:
+        if getattr(page, "_default", False):
+            pg.current_page = page
+            break
+
 pg.run()
+
 
 # -- SHARED ON ALL PAGES --
 # st.sidebar.text("Made by Osmanbeyoglu Lab")
