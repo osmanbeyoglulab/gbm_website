@@ -9,7 +9,7 @@ IMG_REPO_2 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/d
 IMG_REPO_3 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/dotplot_pw_activity'
 IMG_REPO_4 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/dotplot_drug_score'
 
-st.markdown("<h2 style='text-align: center; color: black;'>Metaprogram Maps</h1>", unsafe_allow_html=True)  
+st.markdown("<h2 style='text-align: center; color: black;'>Sample Explore</h1>", unsafe_allow_html=True)  
 st.write("")
 
 
@@ -55,32 +55,32 @@ for index, value in sample_items.items():
 
 
 
-
-c2,d2 = st.columns([ 0.47, 0.6])         
-c2.markdown("<h4 style='text-align: center; color: black;'>Metaprogram Proportion</h4>", unsafe_allow_html=True)
-d2.markdown("<h4 style='text-align: center; color: black;'>Metaprogram</h4>", unsafe_allow_html=True)
-
-
-c3, d3 = st.columns([.12, .12])
-c3.image(f'{IMG_REPO}/pie_metaprogram/{option}.png')
-d3.write("")
-d3.write("")
-d3.write("")
-d3.write("")
-d3.write("")
-d3.image(f'{IMG_REPO}/metaprogram/{option}.png')
-
-
-d_mp = get_sample_metaprograms("./data/sample_metaprograms.pkl")
-l_mp = d_mp[option]
-
-option_mp = st.selectbox(
-    'Metaprogram',
-    l_mp
-)
-
-
-b4, c4 = st.columns([0.2, 0.6])
-c4.image(f'{IMG_REPO}/metaprogram_{option_mp}/{option}.png')
+if sample in ["UKF243"]:
+  c2,d2 = st.columns([ 0.47, 0.6])         
+  c2.markdown("<h4 style='text-align: center; color: black;'>Metaprogram Proportion</h4>", unsafe_allow_html=True)
+  d2.markdown("<h4 style='text-align: center; color: black;'>Metaprogram</h4>", unsafe_allow_html=True)
+  
+  
+  c3, d3 = st.columns([.12, .12])
+  c3.image(f'{IMG_REPO}/pie_metaprogram/{option}.png')
+  d3.write("")
+  d3.write("")
+  d3.write("")
+  d3.write("")
+  d3.write("")
+  d3.image(f'{IMG_REPO}/metaprogram/{option}.png')
+  
+  
+  d_mp = get_sample_metaprograms("./data/sample_metaprograms.pkl")
+  l_mp = d_mp[option]
+  
+  option_mp = st.selectbox(
+      'Metaprogram',
+      l_mp
+  )
+  
+  
+  b4, c4 = st.columns([0.2, 0.6])
+  c4.image(f'{IMG_REPO}/metaprogram_{option_mp}/{option}.png')
 
 
