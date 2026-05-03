@@ -54,10 +54,11 @@ if option not in samples_ren + samples_son:
 elif option in samples_ren:
   # c.image(f'{IMG_REPO_ren}/{option}.png')
   import requests
+  img_url = f'{IMG_REPO_ren}/{option}.png'
   response = requests.get(img_url)
 
   if response.status_code == 200:
-      c.image(f'{IMG_REPO_ren}/{option}.png')
+      c.image(img_url)
   else:
       st.error(f"Image not found: {response.status_code} — {img_url}")
 else:
