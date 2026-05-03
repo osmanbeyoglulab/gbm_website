@@ -36,7 +36,7 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 option = st.selectbox(
     label='Sample',
     options=sample_list,
-    format_func=lambda sample: f"{sample} -validation" if sample in samples_ren + samples_son else f"{sample} -main",
+    format_func=lambda sample: f"{sample} - validation" if sample in samples_ren + samples_son else f"{sample} - main",
     key=persist("sample_id")
 )
 
