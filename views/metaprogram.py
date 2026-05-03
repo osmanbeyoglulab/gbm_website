@@ -53,6 +53,7 @@ if option not in samples_ren + samples_son:
   c.image(f'{IMG_REPO}/he_stain/{option}.png')
 elif option in samples_ren:
   # c.image(f'{IMG_REPO_ren}/{option}.png')
+  import requests
   response = requests.get(img_url)
 
   if response.status_code == 200:
