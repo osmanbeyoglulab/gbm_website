@@ -52,7 +52,13 @@ _, c,_, d = st.columns([.007, .075, 0.04,.1])
 if option not in samples_ren + samples_son:
   c.image(f'{IMG_REPO}/he_stain/{option}.png')
 elif option in samples_ren:
-  c.image(f'{IMG_REPO_ren}/{option}.png')
+  # c.image(f'{IMG_REPO_ren}/{option}.png')
+  response = requests.get(img_url)
+
+  if response.status_code == 200:
+      c.image(f'{IMG_REPO_ren}/{option}.png')
+  else:
+      st.error(f"Image not found: {response.status_code} — {img_url}")
 else:
   c.image(f'{IMG_REPO_son}/{option}.png')
 
