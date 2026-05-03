@@ -56,6 +56,16 @@ df_sample = get_sample_dataframe('./data/dataset.csv')
 st.session_state['df_sample'] = df_sample
 persist("sample_id")
 
+
+samples_ren = ['Ren_GBM2', 'Ren_GBM3', 'Ren_GBM51']
+samples_son = ['SNU16B',	 'SNU18A',	 'SNU18Afrozen',	 'SNU18B',	 'SNU21Afrozen',	 'SNU21B',	 'SNU21Dfrozen',	 'SNU24A',	 'SNU24B',	 'SNU25A',	 'SNU25B',	 'SNU27A',	 'SNU27B',	 'SNU43A',	 'SNU51A',	 'SNU51B']
+if "samples_ren" not in st.session_state:
+    st.session_state.samples_ren = samples_ren
+
+if "samples_son" not in st.session_state:
+    st.session_state.samples_son = samples_son
+
+
 emoji = "🔹" #"🔸" #"💠" #"🔹" # # #
 
 # home_page = st.Page(
