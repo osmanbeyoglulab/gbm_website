@@ -36,8 +36,9 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 option = st.selectbox(
     label='Sample',
     options=sample_list,
-    key = persist("sample_id")
-    ) 
+    format_func=lambda sample: f"{sample} -validation" if sample in samples_ren + samples_son else f"{sample} -main",
+    key=persist("sample_id")
+)
 
 c1,_,d1 = st.columns([ 0.47, 0.1, 0.5])
 
