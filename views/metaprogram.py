@@ -48,7 +48,7 @@ d1.write("")
 d1.markdown( f'<p style="font-family:sans-serif; color:black; font-size: 22px;  font-weight: bold">Sample {option}</p>',  unsafe_allow_html=True) 
 
 _, c,_, d = st.columns([.007, .075, 0.04,.1])
-if option in not in samples_ren + samples_son:
+if option not in samples_ren + samples_son:
   c.image(f'{IMG_REPO}/he_stain/{option}.png')
 elif option in samples_ren:
   c.image(f'{IMG_REPO_ren}/{option}.png')
