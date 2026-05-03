@@ -8,6 +8,8 @@ IMG_REPO = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/met
 IMG_REPO_2 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/dotplot_tf_activity'
 IMG_REPO_3 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/dotplot_pw_activity'
 IMG_REPO_4 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/dotplot_drug_score'
+IMG_REPO_ren = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/ren_he_stain'
+IMG_REPO_son = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/sonpatki_he_stain'
 
 st.markdown("<h2 style='text-align: center; color: black;'>Sample Explore</h1>", unsafe_allow_html=True)  
 st.write("")
@@ -15,7 +17,12 @@ st.write("")
 
 st.info("Visualize the spatial distribution of 14 transcriptional metaprograms within glioblastoma tissue samples. These metaprograms capture key malignant subtypes—such as mesenchymal, neural progenitor-like, and proliferative states—as well as important non-malignant populations, including immune, vascular, and glial cells. Use the interactive map to select and explore metaprograms, viewing their spatial localization alongside histology images.")
 df_sample = st.session_state.df_sample
-sample_list = df_sample['Sample-ID'].values.tolist()
+samples_ravi = df_sample['Sample-ID'].values.tolist()
+
+samples_ren = st.session_state.get("samples_ren", [])
+samples_son = st.session_state.get("samples_son", [])
+
+sample_list = sample_list + samples_ren + samples_son
 
 tabs_font_css = """
 <style>
@@ -42,7 +49,12 @@ d1.write("")
 d1.markdown( f'<p style="font-family:sans-serif; color:black; font-size: 22px;  font-weight: bold">Sample {option}</p>',  unsafe_allow_html=True) 
 
 _, c,_, d = st.columns([.007, .075, 0.04,.1])
-c.image(f'{IMG_REPO}/he_stain/{option}.png')
+if option in samples_ravi:
+  c.image(f'{IMG_REPO}/he_stain/{option}.png')
+elif option in samples_ren:
+  c.image(f{IMG_REPO_ren}/{option}.png)
+else:
+  c.image(f{IMG_REPO_son}/{option}.png)
 
 
 
@@ -55,7 +67,7 @@ for index, value in sample_items.items():
 
 
 
-if option in ["UKF243"]:
+if option not in samples_ren + samples_son:
   c2,d2 = st.columns([ 0.47, 0.6])         
   c2.markdown("<h4 style='text-align: center; color: black;'>Metaprogram Proportion</h4>", unsafe_allow_html=True)
   d2.markdown("<h4 style='text-align: center; color: black;'>Metaprogram</h4>", unsafe_allow_html=True)
@@ -82,5 +94,7 @@ if option in ["UKF243"]:
   
   b4, c4 = st.columns([0.2, 0.6])
   c4.image(f'{IMG_REPO}/metaprogram_{option_mp}/{option}.png')
+
+  
 
 
