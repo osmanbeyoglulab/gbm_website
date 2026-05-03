@@ -51,9 +51,9 @@ _, c,_, d = st.columns([.007, .075, 0.04,.1])
 if option in not in samples_ren + samples_son:
   c.image(f'{IMG_REPO}/he_stain/{option}.png')
 elif option in samples_ren:
-  c.image(f{IMG_REPO_ren}/{option}.png)
+  c.image(f'{IMG_REPO_ren}/{option}.png')
 else:
-  c.image(f{IMG_REPO_son}/{option}.png)
+  c.image(f'{IMG_REPO_son}/{option}.png')
 
 
 
