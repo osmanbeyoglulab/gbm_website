@@ -17,12 +17,11 @@ st.write("")
 
 st.info("Visualize the spatial distribution of 14 transcriptional metaprograms within glioblastoma tissue samples. These metaprograms capture key malignant subtypes—such as mesenchymal, neural progenitor-like, and proliferative states—as well as important non-malignant populations, including immune, vascular, and glial cells. Use the interactive map to select and explore metaprograms, viewing their spatial localization alongside histology images.")
 df_sample = st.session_state.df_sample
-samples_ravi = df_sample['Sample-ID'].values.tolist()
+sample_list = df_sample['Sample-ID'].values.tolist()
 
 samples_ren = st.session_state.get("samples_ren", [])
 samples_son = st.session_state.get("samples_son", [])
 
-sample_list = sample_list + samples_ren + samples_son
 
 tabs_font_css = """
 <style>
@@ -49,7 +48,7 @@ d1.write("")
 d1.markdown( f'<p style="font-family:sans-serif; color:black; font-size: 22px;  font-weight: bold">Sample {option}</p>',  unsafe_allow_html=True) 
 
 _, c,_, d = st.columns([.007, .075, 0.04,.1])
-if option in samples_ravi:
+if option in not in samples_ren + samples_son:
   c.image(f'{IMG_REPO}/he_stain/{option}.png')
 elif option in samples_ren:
   c.image(f{IMG_REPO_ren}/{option}.png)
