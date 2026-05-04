@@ -2,6 +2,7 @@ import streamlit as st
 import urllib.request
 from persist import persist
 import pandas as pd
+from utils import url_is_alive
 
 
 IMG_REPO = 'https://raw.githubusercontent.com/matthewlu2/plot_spatial/main'
@@ -59,19 +60,6 @@ option2 = b.selectbox(
     gene_options
 )
 
-def url_is_alive(url):
-    """
-    Checks that a given URL is reachable.
-    :param url: A URL
-    :rtype: bool
-    """
-    request = urllib.request.Request(url)
-    request.get_method = lambda: 'HEAD'
-    try:
-        urllib.request.urlopen(request)
-        return True
-    except urllib.request.HTTPError:
-        return False
 
 image_na = "./logo/no_available_icon.png"
 
