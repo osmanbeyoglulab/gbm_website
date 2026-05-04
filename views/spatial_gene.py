@@ -6,8 +6,8 @@ import pandas as pd
 
 IMG_REPO = 'https://raw.githubusercontent.com/matthewlu2/plot_spatial/main'
 IMG_REPO_2 = 'https://raw.githubusercontent.com/matthewlu2/plot_violin/main'
-IMG_REPO_ren = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/ren_transcription'
-IMG_REPO_son = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/sonpatki_transcription'
+IMG_REPO_ren = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/ren_mrna'
+IMG_REPO_son = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/sonpatki_mrna'
 
 
 st.markdown("<h2 style='text-align: center; color: black;'>Gene Expression Maps</h1>", unsafe_allow_html=True)  
