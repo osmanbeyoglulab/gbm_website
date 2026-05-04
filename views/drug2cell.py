@@ -67,7 +67,8 @@ else:
 
 option2 = b.selectbox(
     'Drug',
-    drug_options
+    drug_options,
+    key=f"drug_{option}"
 )
 
 
