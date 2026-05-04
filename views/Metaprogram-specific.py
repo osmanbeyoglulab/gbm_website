@@ -1,7 +1,7 @@
 import streamlit as st
 # from views.utils import get_sample_metaprograms
 
-IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data/main'
+IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main'
 # IMG_REPO = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/dotplot_tf_activity'
 # IMG_REPO_2 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/dotplot_pw_activity'
 # IMG_REPO_3 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/dotplot_drug_score'
