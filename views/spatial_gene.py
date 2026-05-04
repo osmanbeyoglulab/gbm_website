@@ -56,7 +56,8 @@ else:
 
 option2 = b.selectbox(
     'Gene',
-    gene_options
+    gene_options,
+    key=f"gene_{option}"
 )
 
 
