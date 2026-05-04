@@ -65,7 +65,8 @@ else:
 
 option2 = b.selectbox(
     'TF',
-    tf_options
+    tf_options,
+    key=f"tf_{option}"
 )
 if option not in samples_ren + samples_son:    
   # a.subheader('Spatial Plot')            
