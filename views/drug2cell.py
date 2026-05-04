@@ -3,6 +3,7 @@ import urllib.request
 from persist import persist
 from views.utils import get_sample_metaprograms
 import pandas as pd
+from utils import url_is_alive
 
 # IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data/main'
 IMG_REPO = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/spatial_drug2cell'
@@ -69,19 +70,7 @@ option2 = b.selectbox(
     drug_options
 )
 
-def url_is_alive(url):
-    """
-    Checks that a given URL is reachable.
-    :param url: A URL
-    :rtype: bool
-    """
-    request = urllib.request.Request(url)
-    request.get_method = lambda: 'HEAD'
-    try:
-        urllib.request.urlopen(request)
-        return True
-    except urllib.request.HTTPError:
-        return False
+
 image_na = "./logo/no_available_icon.png"
 
 if option not in samples_ren + samples_son:
