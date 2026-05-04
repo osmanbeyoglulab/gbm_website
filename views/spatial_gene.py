@@ -1,7 +1,7 @@
 import streamlit as st
 from persist import persist
 import pandas as pd
-from utils import url_is_alive
+from views.utils import url_is_alive
 
 
 IMG_REPO = 'https://raw.githubusercontent.com/matthewlu2/plot_spatial/main'
