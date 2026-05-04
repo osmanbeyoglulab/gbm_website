@@ -22,6 +22,12 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 
 df_sample = st.session_state.df_sample
 sample_list = df_sample['Sample-ID'].values.tolist()
+samples_ren = st.session_state.get("samples_ren", [])
+samples_son = st.session_state.get("samples_son", [])
+
+sample_list = sorted(set(sample_list) - set(samples_ren) - set(samples_son))
+
+
 option = st.selectbox(
     label='Sample',
     options=sample_list,
