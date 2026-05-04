@@ -13,7 +13,10 @@ st.write("")
 st.info("Explore the spatial patterns of individual gene expression within glioblastoma tissue sections. Visualize how any gene of interest is localized across the tumor microenvironment, highlighting expression in malignant cells, immune populations, or stromal regions. Use the search box to enter gene symbols and the sample selector to navigate different patient tumors.")
 
 file = open('text_files/spatial_gene_names.txt', 'r')
-list = file.read().splitlines()
+gene_ravi = file.read().splitlines()
+
+gene_ren = pd.read_csv('text_files/gene_list_ren.csv', header=None)[0].tolist()
+gene_son = pd.read_csv('text_files/gene_list_sonpatki.csv', header=None)[0].tolist()
 
 tabs_font_css = """
 <style>
@@ -24,18 +27,33 @@ div[class*="stSelectbox"] label {
 """
 st.write(tabs_font_css, unsafe_allow_html=True)
 
-a, b = st.columns(2)
+
 df_sample = st.session_state.df_sample
 sample_list = df_sample['Sample-ID'].values.tolist()
+
+samples_ren = st.session_state.get("samples_ren", [])
+samples_son = st.session_state.get("samples_son", [])
+
+a, b = st.columns(2)
+
 option = a.selectbox(
     label='Sample',
     options=sample_list,
     key = persist("sample_id")
     ) 
 
+# Choose gene list based on which dataset the sample belongs to
+if option in samples_ren:
+    gene_options = gene_ren
+elif option in samples_son:
+    gene_options = gene_son
+else:
+    gene_options = gene_ravi
+
 option2 = b.selectbox(
     'Gene',
-    list)
+    gene_options
+)
 
 def url_is_alive(url):
     """
