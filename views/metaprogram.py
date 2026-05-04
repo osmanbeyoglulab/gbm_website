@@ -15,7 +15,7 @@ st.markdown("<h2 style='text-align: center; color: black;'>Sample Explore</h1>",
 st.write("")
 
 
-st.info("Visualize the spatial distribution of 14 transcriptional metaprograms within glioblastoma tissue samples. These metaprograms capture key malignant subtypes—such as mesenchymal, neural progenitor-like, and proliferative states—as well as important non-malignant populations, including immune, vascular, and glial cells. Use the interactive map to select and explore metaprograms, viewing their spatial localization alongside histology images.")
+st.info("Visualize sample H&E stain images and examine their associated metadat. ")
 df_sample = st.session_state.df_sample
 sample_list = df_sample['Sample-ID'].values.tolist()
 
@@ -76,6 +76,8 @@ for index, value in sample_items.items():
 
 
 if option not in samples_ren + samples_son:
+  st.info("Visualize the spatial distribution of 14 transcriptional metaprograms within glioblastoma tissue samples. These metaprograms capture key malignant subtypes—such as mesenchymal, neural progenitor-like, and proliferative states—as well as important non-malignant populations, including immune, vascular, and glial cells. Use the interactive map to select and explore metaprograms, viewing their spatial localization alongside histology images.")
+
   c2,d2 = st.columns([ 0.47, 0.6])         
   c2.markdown("<h4 style='text-align: center; color: black;'>Metaprogram Proportion</h4>", unsafe_allow_html=True)
   d2.markdown("<h4 style='text-align: center; color: black;'>Metaprogram</h4>", unsafe_allow_html=True)
