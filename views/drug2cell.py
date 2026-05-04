@@ -75,13 +75,13 @@ image_na = "./logo/no_available_icon.png"
 
 if option not in samples_ren + samples_son:
 
-  image_spatial = f"{IMG_REPO}/{option}/{option2}.png"
+  image_spatial = f"{IMG_REPO}/{option2}/{option}.png"
   if url_is_alive(image_spatial):
       a.image(image_spatial)
   else:
       a.image(image_na)
 
-  image_spatial = f"{IMG_REPO2}/{option}/{option2}.png"
+  image_spatial = f"{IMG_REPO2}/{option2}/{option}.png"
   if url_is_alive(image_spatial):
       b.image(image_spatial)
   else:
