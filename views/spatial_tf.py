@@ -46,6 +46,8 @@ samples_son = st.session_state.get("samples_son", [])
 # option2 = b.selectbox(
 #     'TF',
 #     list) 
+
+st.write(sample_list)  
 option = a.selectbox(
     label='Sample',
     options=sample_list,
