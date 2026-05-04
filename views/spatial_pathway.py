@@ -33,8 +33,9 @@ samples_son = st.session_state.get("samples_son", [])
 option = a.selectbox(
     label='Sample',
     options=sample_list,
-    key = persist("sample_id")
-    ) 
+    format_func=lambda sample: f"{sample} - validation" if sample in samples_ren + samples_son else f"{sample} - main",
+    key=persist("sample_id")
+)
 
 option2 = b.selectbox(
     'Pathway',
