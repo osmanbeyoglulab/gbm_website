@@ -96,7 +96,8 @@ else:
     image_spatial = f"{IMG_REPO_ren}/{option2}/{option}.png"
   else:
     image_spatial = f"{IMG_REPO_son}/{option2}/{option}.png"
+  _,c,_ = st.colunmns([1,2,1])
   if url_is_alive(image_spatial):
-      st.image(image_spatial)
+      c.image(image_spatial)
   else:
-      st.image(image_na)
+      c.image(image_na)
