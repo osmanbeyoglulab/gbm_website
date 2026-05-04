@@ -32,7 +32,7 @@ SNU16B,core,IDH WT,NA,NA,temporal,F,81,Validation
 SNU18A,tumor,IDH WT,NA,NA,temporal,F,75,Validation
 SNU18Afrozen,tumor,IDH WT,NA,NA,temporal,M,81,Validation
 SNU18B,tumor,IDH WT,NA,NA,temporal,F,76,Validation
-SNU21Afrozen',tumor,IDH WT,NA,NA,occipital,M,51,Validation
+SNU21Afrozen,tumor,IDH WT,NA,NA,occipital,M,51,Validation
 SNU21B,tumor,IDH WT,NA,NA,frontal,F,80,Validation
 SNU21Dfrozen,tumor,IDH WT,NA,NA,temporal,M,34,Validation
 SNU24A,tumor,IDH WT,NA,NA,temporal,M,81,Validation
