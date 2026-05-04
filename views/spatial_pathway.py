@@ -42,6 +42,8 @@ option2 = b.selectbox(
     'Pathway',
     (list)) 
 
+image_na = "./logo/no_available_icon.png"
+
 if option not in samples_ren + samples_son:
     
   # a.subheader('Spatial Plot')
