@@ -5,6 +5,8 @@ from persist import persist
 
 IMG_REPO = 'https://raw.githubusercontent.com/matthewlu2/plot_spatial/main'
 IMG_REPO_2 = 'https://raw.githubusercontent.com/matthewlu2/plot_violin/main'
+IMG_REPO_ren = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/ren_transcription'
+IMG_REPO_son = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/sonpatki_transcription'
 
 
 st.markdown("<h2 style='text-align: center; color: black;'>Gene Expression Maps</h1>", unsafe_allow_html=True)  
@@ -36,11 +38,12 @@ samples_son = st.session_state.get("samples_son", [])
 
 a, b = st.columns(2)
 
-option = a.selectbox(
+option = st.selectbox(
     label='Sample',
     options=sample_list,
-    key = persist("sample_id")
-    ) 
+    format_func=lambda sample: f"{sample} - validation" if sample in samples_ren + samples_son else f"{sample} - main",
+    key=persist("sample_id")
+)
 
 # Choose gene list based on which dataset the sample belongs to
 if option in samples_ren:
@@ -70,17 +73,29 @@ def url_is_alive(url):
         return False
 
 image_na = "./logo/no_available_icon.png"
-# a.subheader('Spatial Plot')
-image_spatial = f"{IMG_REPO}/{option2}/{option}.png"
-# st.text(image_spatial)
-if url_is_alive(image_spatial):
-    a.image(image_spatial)
+
+if option not in samples_ren + samples_son:
+  
+  # a.subheader('Spatial Plot')
+  image_spatial = f"{IMG_REPO}/{option2}/{option}.png"
+  # st.text(image_spatial)
+  if url_is_alive(image_spatial):
+      a.image(image_spatial)
+  else:
+      a.image(image_na)
+  # b.subheader('Violin Plot')
+  image_violin = f"{IMG_REPO_2}/{option2}/{option}.png"
+  # st.text(image_violin)
+  if url_is_alive(image_violin):
+      b.image(image_violin)
+  else:
+      b.image(image_na)
 else:
-    a.image(image_na)
-# b.subheader('Violin Plot')
-image_violin = f"{IMG_REPO_2}/{option2}/{option}.png"
-# st.text(image_violin)
-if url_is_alive(image_violin):
-    b.image(image_violin)
-else:
-    b.image(image_na)
+  if option in samples_ren:
+    image_spatial = f"{IMG_REPO_ren}/{option2}/{option}.png"
+  else:
+    image_spatial = f"{IMG_REPO_son}/{option2}/{option}.png"
+  if url_is_alive(image_spatial):
+      st.image(image_spatial)
+  else:
+      st.image(image_na)
