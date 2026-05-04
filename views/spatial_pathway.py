@@ -1,7 +1,7 @@
 import streamlit as st
 from persist import persist
 import pandas as pd
-from utils import url_is_alive
+from views.utils import url_is_alive
 
 st.markdown("<h2 style='text-align: center; color: black;'>Pathway Activity Maps</h1>", unsafe_allow_html=True)  
 st.write("")
