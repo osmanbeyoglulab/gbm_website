@@ -1,5 +1,4 @@
 import streamlit as st
-import urllib.request
 from persist import persist
 import pandas as pd
 from utils import url_is_alive
