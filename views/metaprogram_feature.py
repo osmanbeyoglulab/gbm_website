@@ -3,8 +3,8 @@ import urllib.request
 from persist import persist
 # from views.utils import get_sample_metaprograms
 
-IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data/main'
-
+# IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data/main'
+IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main'
 
 st.markdown("<h2 style='text-align: center; color: black;'>Metaprogram-Associated Features</h1>", unsafe_allow_html=True)  
 st.write("")
