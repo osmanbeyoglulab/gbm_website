@@ -79,6 +79,7 @@ if option not in samples_ren + samples_son:
   else:
       b.image(image_na)
 else:
+  st.write(f"{IMG_REPO_ren}/{option2}/{option}.png")
   if option in samples_ren:
     image_spatial = f"{IMG_REPO_ren}/{option2}/{option}.png"
   else:
