@@ -39,7 +39,7 @@ samples_son = st.session_state.get("samples_son", [])
 
 a, b = st.columns(2)
 
-option = st.selectbox(
+option = a.selectbox(
     label='Sample',
     options=sample_list,
     format_func=lambda sample: f"{sample} - validation" if sample in samples_ren + samples_son else f"{sample} - main",
