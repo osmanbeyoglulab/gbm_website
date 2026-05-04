@@ -1,6 +1,7 @@
 import streamlit as st
 import urllib.request
 from persist import persist
+import pandas as pd
 
 
 IMG_REPO = 'https://raw.githubusercontent.com/matthewlu2/plot_spatial/main'
