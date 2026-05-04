@@ -36,7 +36,7 @@ sample_list = df_sample['Sample-ID'].values.tolist()
 
 samples_ren = st.session_state.get("samples_ren", [])
 samples_son = st.session_state.get("samples_son", [])
-st.write(samples_son)
+
 a, b = st.columns(2)
 
 option = a.selectbox(
