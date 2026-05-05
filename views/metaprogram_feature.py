@@ -31,6 +31,7 @@ sample_list = sorted(set(sample_list) - set(samples_ren) - set(samples_son))
 option = st.selectbox(
     label='Sample',
     options=sample_list,
+    format_func=lambda sample: f"{sample} - discovery",
     key = persist("sample_id")
     ) 
 
