@@ -11,11 +11,11 @@ IMG_REPO_4 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/d
 IMG_REPO_ren = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/ren_he_stain'
 IMG_REPO_son = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/sonpatki_he_stain'
 
-st.markdown("<h2 style='text-align: center; color: black;'>Sample Explore</h1>", unsafe_allow_html=True)  
+st.markdown("<h2 style='text-align: center; color: black;'>Sample Explorer</h1>", unsafe_allow_html=True)  
 st.write("")
 
 
-st.info("Visualize sample H&E stain images and examine their associated metadat. ")
+st.info("Visualize sample H&E stain images and examine their associated metadata. ")
 df_sample = st.session_state.df_sample
 sample_list = df_sample['Sample-ID'].values.tolist()
 
