@@ -1,30 +1,30 @@
 Sample-ID,Region,IDH-status,Grade,MGMT-status,Location,Sex,Age,Category
-UKF243,core,IDH WT,NA,NA,frontal,F,55,Main
-UKF248,tumor,IDH WT,NA,NA,frontal,M,44,Main
-UKF251,tumor,IDH WT,NA,NA,temporal,M,61,Main
-UKF255,core,IDH WT,NA,NA,temporal,F,81,Main
-UKF259,tumor,IDH WT,NA,NA,temporal,F,75,Main
-UKF260,tumor,IDH WT,NA,NA,temporal,M,81,Main
-UKF266,tumor,IDH WT,NA,NA,temporal,F,76,Main
-UKF269,tumor,IDH WT,NA,NA,occipital,M,51,Main
-UKF275,tumor,IDH WT,NA,NA,frontal,F,80,Main
-UKF296,tumor,IDH WT,NA,NA,temporal,M,34,Main
-UKF304,tumor,IDH WT,NA,NA,temporal,M,81,Main
-UKF313,core,IDH WT,NA,NA,temporal,M,57,Main
-UKF334,tumor,IDH WT,NA,NA,frontal,F,73,Main
-MGH258,bulk,IDH WT,4,methylated,left frontal,F,43,Main
-ZH881inf,inf,IDH WT,4,partially methylated,right temporal,M,79,Main
-ZH881T1,T1,IDH WT,4,partially methylated,right temporal,M,80,Main
-ZH8811Abulk,bulk,IDH WT,4,partially methylated,right temporal,M,81,Main
-ZH8811Bbulk,bulk,IDH WT,4,partially methylated,right temporal,M,82,Main
-ZH8812bulk,bulk,IDH WT,4,partially methylated,right temporal,M,83,Main
-ZH916bulk,bulk,IDH WT,4,methylated,left temporal,M,62,Main
-ZH916inf,inf,IDH WT,4,methylated,left temporal,M,63,Main
-ZH916T1,T1,IDH WT,4,methylated,left temporal,M,64,Main
-ZH1007inf,inf,IDH WT,4,unmethylated,left occipital,F,50,Main
-ZH1007nec,nec,IDH WT,4,unmethylated,left occipital,F,51,Main
-ZH1019inf,inf,IDH WT,4,methylated,left temporal,F,67,Main
-ZH1019T1,T1,IDH WT,4,methylated,left temporal,F,68,Main
+UKF243,core,IDH WT,NA,NA,frontal,F,55,Discovery
+UKF248,tumor,IDH WT,NA,NA,frontal,M,44,Discovery
+UKF251,tumor,IDH WT,NA,NA,temporal,M,61,Discovery
+UKF255,core,IDH WT,NA,NA,temporal,F,81,Discovery
+UKF259,tumor,IDH WT,NA,NA,temporal,F,75,Discovery
+UKF260,tumor,IDH WT,NA,NA,temporal,M,81,Discovery
+UKF266,tumor,IDH WT,NA,NA,temporal,F,76,Discovery
+UKF269,tumor,IDH WT,NA,NA,occipital,M,51,Discovery
+UKF275,tumor,IDH WT,NA,NA,frontal,F,80,Discovery
+UKF296,tumor,IDH WT,NA,NA,temporal,M,34,Discovery
+UKF304,tumor,IDH WT,NA,NA,temporal,M,81,Discovery
+UKF313,core,IDH WT,NA,NA,temporal,M,57,Discovery
+UKF334,tumor,IDH WT,NA,NA,frontal,F,73,Discovery
+MGH258,bulk,IDH WT,4,methylated,left frontal,F,43,Discovery
+ZH881inf,inf,IDH WT,4,partially methylated,right temporal,M,79,Discovery
+ZH881T1,T1,IDH WT,4,partially methylated,right temporal,M,80,Discovery
+ZH8811Abulk,bulk,IDH WT,4,partially methylated,right temporal,M,81,Discovery
+ZH8811Bbulk,bulk,IDH WT,4,partially methylated,right temporal,M,82,Discovery
+ZH8812bulk,bulk,IDH WT,4,partially methylated,right temporal,M,83,Discovery
+ZH916bulk,bulk,IDH WT,4,methylated,left temporal,M,62,Discovery
+ZH916inf,inf,IDH WT,4,methylated,left temporal,M,63,Discovery
+ZH916T1,T1,IDH WT,4,methylated,left temporal,M,64,Discovery
+ZH1007inf,inf,IDH WT,4,unmethylated,left occipital,F,50,Discovery
+ZH1007nec,nec,IDH WT,4,unmethylated,left occipital,F,51,Discovery
+ZH1019inf,inf,IDH WT,4,methylated,left temporal,F,67,Discovery
+ZH1019T1,T1,IDH WT,4,methylated,left temporal,F,68,Discovery
 Ren_GBM2,core,IDH WT,NA,NA,frontal,F,55,Validation
 Ren_GBM3,tumor,IDH WT,NA,NA,frontal,M,44,Validation
 Ren_GBM51,tumor,IDH WT,NA,NA,temporal,M,61,Validation
