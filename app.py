@@ -157,7 +157,7 @@ datasets_page = st.Page(
 
 metaprogram_page = st.Page(
     page = "views/metaprogram.py",
-    title = "Sample explore",
+    title = "Sample Explorer",
     icon = emoji   
 )
 
