@@ -1,6 +1,6 @@
 import streamlit as st
 
-IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data/main'
+IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main'
 
 st.markdown("<h2 style='text-align: center; color: black;'>Metaprogram-Centric Comparison</h1>", unsafe_allow_html=True)  
 st.write("")
