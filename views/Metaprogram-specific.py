@@ -36,7 +36,6 @@ option_mp = st.selectbox(
 
 
 st.markdown("<h3 style='text-align: center; color: black;'>Top TFs across samples</h1>", unsafe_allow_html=True)
-st.write(f'{IMG_REPO}/across_sample_top_transcriptions_per_metaprogram/{option_mp}.png')
 st.image(f'{IMG_REPO}/across_sample_top_transcriptions_per_metaprogram/{option_mp}.png')
 
 st.markdown("<h3 style='text-align: center; color: black;'>Top pathways across samples</h1>", unsafe_allow_html=True)
