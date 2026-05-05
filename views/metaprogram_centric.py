@@ -5,7 +5,7 @@ IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main'
 st.markdown("<h2 style='text-align: center; color: black;'>Metaprogram-Centric Comparison</h1>", unsafe_allow_html=True)  
 st.write("")
 
-st.info("""Compare how regulatory features linked to transcriptional metaprograms vary across multiple glioblastoma samples.  
+st.info("""Compare how regulatory features linked to transcriptional metaprograms vary across multiple discovery glioblastoma samples.  
 • **TF**: Examine transcription factors associated with each metaprogram to see which are consistently or differentially active across tumors.  
 • **Pathway**: Explore pathway activation linked to specific metaprograms, uncovering shared or distinct signaling programs.  
 • **Drug**: Assess predicted drug response signatures tied to different metaprograms, highlighting therapeutic vulnerabilities across the cohort.  
