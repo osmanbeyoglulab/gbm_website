@@ -1,46 +1,46 @@
-Sample-ID,Region,IDH-status,Grade,MGMT-status,Location,Sex,Age,Category
-UKF243,core,IDH WT,NA,NA,frontal,F,55,Discovery
-UKF248,tumor,IDH WT,NA,NA,frontal,M,44,Discovery
-UKF251,tumor,IDH WT,NA,NA,temporal,M,61,Discovery
-UKF255,core,IDH WT,NA,NA,temporal,F,81,Discovery
-UKF259,tumor,IDH WT,NA,NA,temporal,F,75,Discovery
-UKF260,tumor,IDH WT,NA,NA,temporal,M,81,Discovery
-UKF266,tumor,IDH WT,NA,NA,temporal,F,76,Discovery
-UKF269,tumor,IDH WT,NA,NA,occipital,M,51,Discovery
-UKF275,tumor,IDH WT,NA,NA,frontal,F,80,Discovery
-UKF296,tumor,IDH WT,NA,NA,temporal,M,34,Discovery
-UKF304,tumor,IDH WT,NA,NA,temporal,M,81,Discovery
-UKF313,core,IDH WT,NA,NA,temporal,M,57,Discovery
-UKF334,tumor,IDH WT,NA,NA,frontal,F,73,Discovery
-MGH258,bulk,IDH WT,4,methylated,left frontal,F,43,Discovery
-ZH881inf,inf,IDH WT,4,partially methylated,right temporal,M,79,Discovery
-ZH881T1,T1,IDH WT,4,partially methylated,right temporal,M,80,Discovery
-ZH8811Abulk,bulk,IDH WT,4,partially methylated,right temporal,M,81,Discovery
-ZH8811Bbulk,bulk,IDH WT,4,partially methylated,right temporal,M,82,Discovery
-ZH8812bulk,bulk,IDH WT,4,partially methylated,right temporal,M,83,Discovery
-ZH916bulk,bulk,IDH WT,4,methylated,left temporal,M,62,Discovery
-ZH916inf,inf,IDH WT,4,methylated,left temporal,M,63,Discovery
-ZH916T1,T1,IDH WT,4,methylated,left temporal,M,64,Discovery
-ZH1007inf,inf,IDH WT,4,unmethylated,left occipital,F,50,Discovery
-ZH1007nec,nec,IDH WT,4,unmethylated,left occipital,F,51,Discovery
-ZH1019inf,inf,IDH WT,4,methylated,left temporal,F,67,Discovery
-ZH1019T1,T1,IDH WT,4,methylated,left temporal,F,68,Discovery
-Ren_GBM2,core,IDH WT,NA,NA,frontal,F,55,Validation
-Ren_GBM3,tumor,IDH WT,NA,NA,frontal,M,44,Validation
-Ren_GBM51,tumor,IDH WT,NA,NA,temporal,M,61,Validation
-SNU16B,core,IDH WT,NA,NA,temporal,F,81,Validation
-SNU18A,tumor,IDH WT,NA,NA,temporal,F,75,Validation
-SNU18Afrozen,tumor,IDH WT,NA,NA,temporal,M,81,Validation
-SNU18B,tumor,IDH WT,NA,NA,temporal,F,76,Validation
-SNU21Afrozen,tumor,IDH WT,NA,NA,occipital,M,51,Validation
-SNU21B,tumor,IDH WT,NA,NA,frontal,F,80,Validation
-SNU21Dfrozen,tumor,IDH WT,NA,NA,temporal,M,34,Validation
-SNU24A,tumor,IDH WT,NA,NA,temporal,M,81,Validation
-SNU24B,core,IDH WT,NA,NA,temporal,M,57,Validation
-SNU25A,bulk,IDH WT,4,methylated,left frontal,F,43,Validation
-SNU25B,inf,IDH WT,4,partially methylated,right temporal,M,79,Validation
-SNU27A,T1,IDH WT,4,partially methylated,right temporal,M,80,Validation
-SNU27B,bulk,IDH WT,4,partially methylated,right temporal,M,81,Validation
-SNU43A,bulk,IDH WT,4,partially methylated,right temporal,M,82,Validation
-SNU51A,bulk,IDH WT,4,partially methylated,right temporal,M,83,Validation
-SNU51B,bulk,IDH WT,4,methylated,left temporal,M,62,Validation
+Sample-ID,Region,IDH-status,Grade,MGMT-status,Location,Sex,Age,Category,
+UKF243,core,IDH WT,NA,NA,frontal,F,55,Discovery,
+UKF248,tumor,IDH WT,NA,NA,frontal,M,44,Discovery,
+UKF251,tumor,IDH WT,NA,NA,temporal,M,61,Discovery,
+UKF255,core,IDH WT,NA,NA,temporal,F,81,Discovery,
+UKF259,tumor,IDH WT,NA,NA,temporal,F,75,Discovery,
+UKF260,tumor,IDH WT,NA,NA,temporal,M,81,Discovery,
+UKF266,tumor,IDH WT,NA,NA,temporal,F,76,Discovery,
+UKF269,tumor,IDH WT,NA,NA,occipital,M,51,Discovery,
+UKF275,tumor,IDH WT,NA,NA,frontal,F,80,Discovery,
+UKF296,tumor,IDH WT,NA,NA,temporal,M,34,Discovery,
+UKF304,tumor,IDH WT,NA,NA,temporal,M,81,Discovery,
+UKF313,core,IDH WT,NA,NA,temporal,M,57,Discovery,
+UKF334,tumor,IDH WT,NA,NA,frontal,F,73,Discovery,
+MGH258,bulk,IDH WT,4,methylated,left frontal,F,43,Discovery,
+ZH881inf,inf,IDH WT,4,partially methylated,right temporal,M,79,Discovery,
+ZH881T1,T1,IDH WT,4,partially methylated,right temporal,M,80,Discovery,
+ZH8811Abulk,bulk,IDH WT,4,partially methylated,right temporal,M,81,Discovery,
+ZH8811Bbulk,bulk,IDH WT,4,partially methylated,right temporal,M,82,Discovery,
+ZH8812bulk,bulk,IDH WT,4,partially methylated,right temporal,M,83,Discovery,
+ZH916bulk,bulk,IDH WT,4,methylated,left temporal,M,62,Discovery,
+ZH916inf,inf,IDH WT,4,methylated,left temporal,M,63,Discovery,
+ZH916T1,T1,IDH WT,4,methylated,left temporal,M,64,Discovery,
+ZH1007inf,inf,IDH WT,4,unmethylated,left occipital,F,50,Discovery,
+ZH1007nec,nec,IDH WT,4,unmethylated,left occipital,F,51,Discovery,
+ZH1019inf,inf,IDH WT,4,methylated,left temporal,F,67,Discovery,
+ZH1019T1,T1,IDH WT,4,methylated,left temporal,F,68,Discovery,
+Ren_GBM2,NA,IDH WT,4,methylated,Corpus callosum,NA,>40,Validation,can not tell whether its partial
+Ren_GBM3,NA,IDH WT,4,methylated,Left thalamus,NA,>40,Validation,
+Ren_GBM51,NA,IDH WT,4,methylated,Right temporal,NA,>40,Validation,
+SNU16B,NA,IDH WT,NA,unmethylated,NA,F,80-85,Validation,
+SNU18A,NA,IDH WT,NA,methylated,NA,M,40-45,Validation,
+SNU18Afrozen,NA,IDH WT,NA,methylated,NA,M,40-45,Validation,
+SNU18B,NA,IDH WT,NA,methylated,NA,M,40-45,Validation,
+SNU21Afrozen,NA,IDH WT,NA,methylated,NA,F,60-65,Validation,
+SNU21B,NA,IDH WT,NA,methylated,NA,F,60-65,Validation,
+SNU21Dfrozen,NA,IDH WT,NA,methylated,NA,F,60-65,Validation,
+SNU24A,NA,IDH WT,NA,unmethylated,NA,F,70-75,Validation,
+SNU24B,NA,IDH WT,NA,unmethylated,NA,F,70-75,Validation,
+SNU25A,NA,IDH WT,NA,methylated,NA,M,55-60,Validation,
+SNU25B,NA,IDH WT,NA,methylated,NA,M,55-60,Validation,
+SNU27A,NA,IDH WT,NA,methylated,NA,F,45-50,Validation,
+SNU27B,NA,IDH WT,NA,methylated,NA,F,45-50,Validation,
+SNU43A,NA,IDH WT,NA,unmethylated,NA,M,55-60,Validation,
+SNU51A,NA,IDH WT,NA,methylated,NA,F,65-70,Validation,
+SNU51B,NA,IDH WT,NA,methylated,NA,F,65-70,Validation,
