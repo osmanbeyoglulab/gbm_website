@@ -83,10 +83,11 @@ else:
 
   if option in samples_ren:
     image_spatial = f"{IMG_REPO_ren}/{option2}/{option}.png"
-
+     
   else:
     image_spatial = f"{IMG_REPO_son}/{option2}/{option}.png"
-
+    
+  st.write(image_spatial)
   _,c,_ = st.columns([1, 2, 1])
   if url_is_alive(image_spatial):
       c.image(image_spatial)
