@@ -179,9 +179,15 @@ drug2cell_page = st.Page(
     icon = emoji
 )
 
-heatmap_gene_correlation_page = st.Page(
-    page = "views/Ligand–Receptor–Pathway–TF_Correlation.py",
-    title = "L-R-Pathway-TF-Drug Correlation Heatmap",  #Correlation heatmaps
+discover_correlation_page = st.Page(
+    page = "views/discovery_correlation.py",
+    title = "Discover Dataset Correlation Heatmap",  #Correlation heatmaps
+    icon = emoji
+)
+
+validation_correlation_page = st.Page(
+    page = "views/validation_correlation.py",
+    title = "Validation Dataset Correlation Heatmap",  #Correlation heatmaps
     icon = emoji
 )
 
@@ -224,7 +230,7 @@ pg = st.navigation(
     {
         "": [home_page, datasets_page],
         "Analysis of Individual Samples": [metaprogram_page, metaprogram_feature_page, gene_page, s_tf_page, s_pathway_page , drug2cell_page],
-        "Comparison Across Samples": [mp_specific_page,  heatmap_gene_correlation_page], 
+        "Comparison Across Samples": [mp_specific_page,  discover_correlation_page,  validation_correlation_page], 
         "Resources": [citation_page, contact_page]
     }
 )
