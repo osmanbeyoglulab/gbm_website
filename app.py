@@ -179,7 +179,7 @@ drug2cell_page = st.Page(
     icon = emoji
 )
 
-discover_correlation_page = st.Page(
+discovery_correlation_page = st.Page(
     page = "views/correlation_discovery.py",
     title = "Discover Dataset Correlation Heatmap",  #Correlation heatmaps
     icon = emoji
