@@ -180,13 +180,13 @@ drug2cell_page = st.Page(
 )
 
 discover_correlation_page = st.Page(
-    page = "views/discovery_correlation.py",
+    page = "views/correlation_discovery.py",
     title = "Discover Dataset Correlation Heatmap",  #Correlation heatmaps
     icon = emoji
 )
 
 validation_correlation_page = st.Page(
-    page = "views/validation_correlation.py",
+    page = "views/correlation_validation.py",
     title = "Validation Dataset Correlation Heatmap",  #Correlation heatmaps
     icon = emoji
 )
