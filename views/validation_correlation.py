@@ -2,7 +2,8 @@ import streamlit as st
 # from streamlit_option_menu import option_menu
 # from streamlit_pdf_viewer import pdf_viewer
 
-IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data/main'
+# IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data/main'
+IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/correlation_ren'
 
 st.markdown("<h2 style='text-align: center; color: black;'>L-R-Pathway-TF-Drug Correlation Heatmap for discovery dataset</h1>", unsafe_allow_html=True)  
 st.write("")
@@ -20,12 +21,12 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 
 
 option = "tf"
-file = open('text_files/correlation_per_tf_names.txt', 'r')
+file = open('text_files/correlation_per_tf_names_ren.txt', 'r')
 list = file.read().splitlines()
 option_tf = st.selectbox(
     'TF',
     list) 
-st.image(f'{IMG_REPO}/corr_with_{option}2/{option_tf}.png')
+st.image(f'{IMG_REPO}/corr_with_{option}/{option_tf}.png')
 
 st.write("")
 option = "pathway"
@@ -34,26 +35,26 @@ list = file.read().splitlines()
 option_pw = st.selectbox(
     'Pathway',
     list) 
-st.image(f'{IMG_REPO}/corr_with_{option}2/{option_pw}.png')
+st.image(f'{IMG_REPO}/corr_with_{option}/{option_pw}.png')
 
 st.write("")
 option = "drug"
-file = open('text_files/correlation_per_drug_names.txt', 'r')
+file = open('text_files/correlation_per_drug_names_ren.txt', 'r')
 list = file.read().splitlines()
 option_drug = st.selectbox(
     'Drug',
     list) 
-st.image(f'{IMG_REPO}/corr_with_{option}2/{option_drug}.png')
+st.image(f'{IMG_REPO}/corr_with_{option}/{option_drug}.png')
 
 st.write("")
 option = "gene"
-file = open('text_files/correlation_per_gene_names.txt', 'r')
+file = open('text_files/correlation_per_gene_names_ren.txt', 'r')
 list = file.read().splitlines()
 
 option_gene = st.selectbox(
     'Gene',
     list) 
-st.image(f'{IMG_REPO}/corr_with_{option}2/{option_gene}.png')
+st.image(f'{IMG_REPO}/corr_with_{option}/{option_gene}.png')
 # pdf_viewer(input = f'data/correlation_per_gene/{option}.pdf')
 
 
