@@ -55,7 +55,7 @@ gene_list = df[0].tolist()
 
 option_gene = st.selectbox(
     'Gene',
-    list) 
+    gene_list) 
 st.image(f'{IMG_REPO}/corr_with_{option}/{option_gene}.png')
 # pdf_viewer(input = f'data/correlation_per_gene/{option}.pdf')
 
