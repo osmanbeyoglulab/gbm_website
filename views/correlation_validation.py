@@ -21,11 +21,11 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 
 
 option = "tf"
-file = open('text_files/correlation_per_tf_names_ren.txt', 'r')
-list = file.read().splitlines()
+df = pd.read_csv("correlation_per_tf_names_ren.csv", header=None)
+tf_list = df[0].tolist()
 option_tf = st.selectbox(
     'TF',
-    list) 
+    tf_list) 
 st.image(f'{IMG_REPO}/corr_with_{option}/{option_tf}.png')
 
 st.write("")
@@ -39,17 +39,18 @@ st.image(f'{IMG_REPO}/corr_with_{option}/{option_pw}.png')
 
 st.write("")
 option = "drug"
-file = open('text_files/correlation_per_drug_names_ren.txt', 'r')
-list = file.read().splitlines()
+df = pd.read_csv("correlation_per_drug_names_ren.csv", header=None)
+drug_list = df[0].tolist()
 option_drug = st.selectbox(
     'Drug',
-    list) 
+    drug_list,
+    format_func=lambda x: x.replace("_", "|")) 
 st.image(f'{IMG_REPO}/corr_with_{option}/{option_drug}.png')
 
 st.write("")
 option = "gene"
-file = open('text_files/correlation_per_gene_names_ren.txt', 'r')
-list = file.read().splitlines()
+df = pd.read_csv("correlation_per_gene_names_ren.csv", header=None)
+gene_list = df[0].tolist()
 
 option_gene = st.selectbox(
     'Gene',
