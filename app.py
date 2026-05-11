@@ -191,6 +191,12 @@ validation_correlation_page = st.Page(
     icon = emoji
 )
 
+all_correlation_page = st.Page(
+    page = "views/correlation_all.py",
+    title = "All Dataset Correlation Heatmap",  #Correlation heatmaps
+    icon = emoji
+)
+
 gene_page = st.Page(
     page = "views/spatial_gene.py",
     title = "Gene Expression Maps",
@@ -230,7 +236,7 @@ pg = st.navigation(
     {
         "": [home_page, datasets_page],
         "Analysis of Individual Samples": [metaprogram_page, metaprogram_feature_page, gene_page, s_tf_page, s_pathway_page , drug2cell_page],
-        "Comparison Across Samples": [mp_specific_page,  discovery_correlation_page,  validation_correlation_page], 
+        "Comparison Across Samples": [mp_specific_page,  discovery_correlation_page,  validation_correlation_page, all_correlation_page], 
         "Resources": [citation_page, contact_page]
     }
 )
