@@ -31,7 +31,7 @@ tf_list = df[0].tolist()
 
 option_tf = st.selectbox(
     'TF',
-#     tf_list) 
+    tf_list) 
 # st.image(f'{IMG_REPO_2}/corr_with_{option}2/{option_tf}.png')
 st.image(f'{IMG_REPO_2}/correlation_ravi/corr_with_{option}/{option_tf}.png')
 
