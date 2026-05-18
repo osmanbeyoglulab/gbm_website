@@ -3,6 +3,7 @@ import streamlit as st
 # from streamlit_pdf_viewer import pdf_viewer
 
 IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data/main'
+IMG_REPO_2 = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main'
 
 st.markdown("<h2 style='text-align: center; color: black;'>L-R-Pathway-TF-Drug Correlation Heatmap for Discovery Cohort</h1>", unsafe_allow_html=True)  
 st.write("")
@@ -20,17 +21,23 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 
 
 option = "tf"
-file = open('text_files/correlation_per_tf_names.txt', 'r')
-list = file.read().splitlines()
+
+# file = open('text_files/correlation_per_tf_names.txt', 'r')
+# list = file.read().splitlines()
+
+df = pd.read_csv("text_files/correlation_per_tf_names_ravi.csv", header=None)
+tf_list = df[0].tolist()
+
 option_tf = st.selectbox(
     'TF',
-    list) 
-st.image(f'{IMG_REPO}/corr_with_{option}2/{option_tf}.png')
+    tf_list) 
+st.image(f'{IMG_REPO_2}/corr_with_{option}2/{option_tf}.png')
 
 st.write("")
 option = "pathway"
 file = open('text_files/correlation_per_pathway_names.txt', 'r')
 list = file.read().splitlines()
+
 option_pw = st.selectbox(
     'Pathway',
     list) 
@@ -38,13 +45,17 @@ st.image(f'{IMG_REPO}/corr_with_{option}2/{option_pw}.png')
 
 st.write("")
 option = "drug"
-file = open('text_files/correlation_per_drug_names.txt', 'r')
-list = file.read().splitlines()
+# file = open('text_files/correlation_per_drug_names.txt', 'r')
+# list = file.read().splitlines()
+
+df = pd.read_csv("text_files/correlation_per_drug_names_ravi.csv", header=None)
+drug_list = df[0].tolist()
+
 option_drug = st.selectbox(
     'Drug',
-    list,
+    drug_list,
     format_func=lambda x: x.replace("_", "|"))
-st.image(f'{IMG_REPO}/corr_with_{option}2/{option_drug}.png')
+st.image(f'{IMG_REPO_2}/corr_with_{option}2/{option_drug}.png')
 
 st.write("")
 option = "gene"
