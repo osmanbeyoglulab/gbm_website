@@ -43,7 +43,7 @@ list = file.read().splitlines()
 option_drug = st.selectbox(
     'Drug',
     list,
-    format_func=lambda x: x.replace("_", "|"))) 
+    format_func=lambda x: x.replace("_", "|"))
 st.image(f'{IMG_REPO}/corr_with_{option}2/{option_drug}.png')
 
 st.write("")
