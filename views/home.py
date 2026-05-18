@@ -9,7 +9,7 @@ import streamlit as st
 img = "./images/GLBGV_1_Graphical_Abstract_22_Aug_2025_clipped.png"
 
 
-st.markdown("<h2 style='text-align: center;  color: black;'>Spatial Regulatory Landscape of Glioblastoma Tumor Immune Microenvironment", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;  color: black;'>Spatial Regulatory Landscape of Glioblastoma Tumor Microenvironment", unsafe_allow_html=True)
 
 st.write("")
 
