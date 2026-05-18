@@ -7,7 +7,6 @@ from style import define_layout
 # st.cache_data.clear()
 # st.cache_resource.clear()
 
-
 # --- PAGE SETUP ----
 
 st.set_page_config(
@@ -17,33 +16,7 @@ st.set_page_config(
         # layout="wide" 
 )
 
-# max_width_str = f"max-width: {80}%;"
-
-# st.markdown(f"""
-#         <style>
-#         .appview-container .main .block-container{{{max_width_str}}}
-#         </style>
-#         """,
-#         unsafe_allow_html=True,
-#     )
-
 define_layout(max_width='80%', padding_top='2rem', padding_right='0rem', padding_left='0rem', padding_bottom='0rem')
-
-# st.markdown(f"""
-#     <style>
-#         .stSelectbox > label {{
-#             # font-size:200%; 
-#             font-size: 30px;
-#             font-weight:bold; 
-#             color: purple;
-#         }}
-#         .stMultiSelect > label {{
-#             font-size:105%; 
-#             font-weight:bold; 
-#             color:black;
-#         }}
-#     </style>
-#     """, unsafe_allow_html=True)
 
 # ---- start main ---
 
@@ -64,83 +37,7 @@ if "samples_ren" not in st.session_state:
 
 if "samples_son" not in st.session_state:
     st.session_state.samples_son = samples_son
-
-
 emoji = "🔹" #"🔸" #"💠" #"🔹" # # #
-
-# home_page = st.Page(
-#     page = "views/home.py",
-#     title = "Home",
-#     icon = "🏠",   #":material/chevron_right:"  ,
-#     default= True,
-# )
-
-# datasets_page = st.Page(
-#     page = "views/dataset.py",
-#     title = "Dataset Explorer",
-#     icon = "🗂️"  
-# )
-
-# metaprogram_page = st.Page(
-#     page = "views/metaprogram.py",
-#     title = "Metaprogram Maps",
-#     icon = "🌀"    
-# )
-
-# metaprogram_feature_page = st.Page(
-#     page = "views/metaprogram_feature.py",
-#     title = "Metaprogram-Associated Features",
-#     icon = "🧩"    
-# )
-
-# mp_specific_page = st.Page(
-#     page = "views/metaprogram_centric.py",
-#     title = "Metaprogram-Centric Comparison",  #Metaprogram
-#     icon = "📊"   #🌀
-# )
-
-# drug2cell_page = st.Page(
-#     page = "views/drug2cell.py",
-#     title = "Drug2Cell Score Maps",
-#     icon = "💊"
-# )
-
-# heatmap_gene_correlation_page = st.Page(
-#     page = "views/Ligand–Receptor–TF–Pathway_Correlation.py",
-#     title = "L-R-TF-Pathway-Drug Correlation Heatmap",  #Correlation heatmaps
-#     icon = "🪢"
-# )
-
-# gene_page = st.Page(
-#     page = "views/spatial_gene.py",
-#     title = "Gene Expression Maps",
-#     icon = "🧬"
-# )
-
-# s_tf_page = st.Page(
-#     page = "views/spatial_tf.py",
-#     title = "TF Activity Maps",
-#     icon = "🎯"
-# )
-
-# s_pathway_page = st.Page(
-#     page = "views/spatial_pathway.py",
-#     title = "Pathway Activity Maps",
-#     icon = "🔀"
-# )
-
-
-# contact_page = st.Page(
-#     page = "views/contact.py",
-#     title = "Contact us",
-#     icon = "📨"
-# )
-
-# citation_page = st.Page(
-#     page = "views/citation.py",
-#     title = "Citation",
-#     icon = "📚"
-# )
 
 home_page = st.Page(
     page = "views/home.py",
