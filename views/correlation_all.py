@@ -4,7 +4,7 @@ import pandas as pd
 # from streamlit_pdf_viewer import pdf_viewer
 
 # IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data/main'
-IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/correlation_ren'
+IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/correlation_comb'
 
 st.markdown("<h2 style='text-align: center; color: black;'>L-R-Pathway-TF-Drug Correlation Heatmap for validation dataset</h1>", unsafe_allow_html=True)  
 st.write("")
@@ -22,7 +22,7 @@ st.write(tabs_font_css, unsafe_allow_html=True)
 
 
 option = "tf"
-df = pd.read_csv("text_files/correlation_per_tf_names_ren.csv", header=None)
+df = pd.read_csv("text_files/correlation_per_tf_names_comb.csv", header=None)
 tf_list = df[0].tolist()
 option_tf = st.selectbox(
     'TF',
@@ -40,7 +40,7 @@ st.image(f'{IMG_REPO}/corr_with_{option}/{option_pw}.png')
 
 st.write("")
 option = "drug"
-df = pd.read_csv("text_files/correlation_per_drug_names_ren.csv", header=None)
+df = pd.read_csv("text_files/correlation_per_drug_names_comb.csv", header=None)
 drug_list = df[0].tolist()
 option_drug = st.selectbox(
     'Drug',
@@ -50,7 +50,7 @@ st.image(f'{IMG_REPO}/corr_with_{option}/{option_drug}.png')
 
 st.write("")
 option = "gene"
-df = pd.read_csv("text_files/correlation_per_gene_names_ren.csv", header=None)
+df = pd.read_csv("text_files/correlation_per_gene_names_comb.csv", header=None)
 gene_list = df[0].tolist()
 
 option_gene = st.selectbox(
