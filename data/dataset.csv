@@ -25,7 +25,7 @@ ZH1007inf,inf,IDH WT,4,unmethylated,left occipital,F,50,Discovery,
 ZH1007nec,nec,IDH WT,4,unmethylated,left occipital,F,51,Discovery,
 ZH1019inf,inf,IDH WT,4,methylated,left temporal,F,67,Discovery,
 ZH1019T1,T1,IDH WT,4,methylated,left temporal,F,68,Discovery,
-Ren_GBM2,NA,IDH WT,4,methylated,Corpus callosum,NA,>40,Validation,can not tell whether its partial
+Ren_GBM2,NA,IDH WT,4,methylated,Corpus callosum,NA,>40,Validation,
 Ren_GBM3,NA,IDH WT,4,methylated,Left thalamus,NA,>40,Validation,
 Ren_GBM51,NA,IDH WT,4,methylated,Right temporal,NA,>40,Validation,
 SNU16B,NA,IDH WT,NA,unmethylated,NA,F,80-85,Validation,
