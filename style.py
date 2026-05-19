@@ -108,8 +108,8 @@ footer = """
 </div>
 """
 
-st.markdown(page_style, unsafe_allow_html=True)
-st.markdown(footer, unsafe_allow_html=True)
+# st.markdown(page_style, unsafe_allow_html=True)
+# st.markdown(footer, unsafe_allow_html=True)
 
 def define_layout(max_width='95%', padding_top='1rem', padding_right='2rem', padding_left='2rem', padding_bottom='0rem'):
    
