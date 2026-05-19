@@ -47,8 +47,6 @@ import streamlit as st
 # """
 
 
-import streamlit as st
-
 page_style = """
     <style>
         #MainMenu {visibility: hidden;} 
@@ -82,12 +80,6 @@ footer = """
 </style>
 <div class="footer">
     <p style="font-size: 13px">© 2026 Osmanbeyoglulab.com. All rights reserved.</p>
-    <a href="https://hillman.upmc.com/" target="_blank">
-        <img class="image"
-             src="https://www.upmc.com/images/logos/upmc-logo.png"
-             alt="UPMC" width="70" height="50"
-             onerror="this.style.display='none'">
-    </a>
     <a href="https://www.pitt.edu/" target="_blank">
         <img class="image"
              src="https://upload.wikimedia.org/wikipedia/en/f/fb/University_of_Pittsburgh_seal.svg"
@@ -107,9 +99,6 @@ footer = """
     </a>
 </div>
 """
-
-# st.markdown(page_style, unsafe_allow_html=True)
-# st.markdown(footer, unsafe_allow_html=True)
 
 def define_layout(max_width='95%', padding_top='1rem', padding_right='2rem', padding_left='2rem', padding_bottom='0rem'):
    
