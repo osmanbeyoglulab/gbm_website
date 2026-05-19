@@ -146,7 +146,7 @@ pg.run()
 
 # -- RUN NAVIGATION --
 # pg.run()
-st.divider()
+# st.divider()
 st.markdown(footer,unsafe_allow_html=True) 
 
 
