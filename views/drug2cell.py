@@ -90,7 +90,7 @@ if option not in samples_ren + samples_son:
   # a.image(f'{IMG_REPO}/{option}/{option2}.png')
   # b.image(f'{IMG_REPO2}/{option}/{option2}.png')
   
-  IMG_REPO3 = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data/main'
+  IMG_REPO3 = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main'
   st.markdown("<h3 style='text-align: center; color: black;'>Drug2Cell Scores across Metaprogram</h1>", unsafe_allow_html=True)
   st.image(f'{IMG_REPO3}/across_metaprogram_top_drugs_per_sample/{option2}.png')
 
