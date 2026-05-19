@@ -1,1 +1,1 @@
-https://spatial-gbm.streamlit.app/
+https://spatialgbm.org/
