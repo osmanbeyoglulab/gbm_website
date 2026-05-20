@@ -75,7 +75,7 @@ if option not in samples_ren + samples_son:
   b.image(f'{IMG_REPO}/violin_tf_activity/{option2}/{option}.png')
   
   
-  IMG_REPO2 = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data/main'
+  IMG_REPO2 = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main'
   st.markdown("<h3 style='text-align: center; color: black;'>TF Activity across Metaprograms</h3>", unsafe_allow_html=True)
   st.image(f'{IMG_REPO2}/across_metaprogram_top_transcriptions_per_sample/{option}.png')
   
