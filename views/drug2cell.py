@@ -3,7 +3,7 @@ import urllib.request
 from persist import persist
 from views.utils import get_sample_metaprograms
 import pandas as pd
-from views.utils import url_is_alive
+from views.utils import url_is_alive, load_pickle
 
 # IMG_REPO = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/spatial_drug2cell'
 # IMG_REPO2 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/violin_drug2cell'
