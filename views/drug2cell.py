@@ -5,10 +5,10 @@ from views.utils import get_sample_metaprograms
 import pandas as pd
 from views.utils import url_is_alive, load_pickle
 
-# IMG_REPO = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/spatial_drug2cell'
-# IMG_REPO2 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/violin_drug2cell'
-IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/ravi_drug'
-IMG_REPO2 = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/ravi_drug_violin'
+IMG_REPO = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/spatial_drug2cell'
+IMG_REPO2 = 'https://raw.githubusercontent.com/matthewlu2/gbm_small_data/main/violin_drug2cell'
+# IMG_REPO = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/ravi_drug'
+# IMG_REPO2 = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/ravi_drug_violin'
 IMG_REPO_ren = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/ren_drug'
 IMG_REPO_son = 'https://raw.githubusercontent.com/osmanbeyoglulab/gbm_data_v2/main/sonpatki_drug'
 
