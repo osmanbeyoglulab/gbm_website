@@ -17,12 +17,14 @@ st.write("")
 
 st.info("Integrate spatial transcriptomic data with Drug2Cell predictions to map drug sensitivity scores across glioblastoma samples. Identify tumor regions that may respond to specific drugs based on local transcription factor and pathway activity profiles. Compare drug scores across metaprograms to uncover therapeutic targets tied to distinct tumor niches or cellular states. Use the search box to enter drug names and the sample selector to explore across different tumors.")
 
-file = open('text_files/drug2cell_names.txt', 'r')
-drug_ravi = sorted(file.read().splitlines())
+# file = open('text_files/drug2cell_names.txt', 'r')
+# drug_ravi = sorted(file.read().splitlines())
 
-drug_ren = pd.read_csv('text_files/drug_list_ren.csv', header=None)[0].tolist()
-drug_son = pd.read_csv('text_files/drug_list_sonpatki.csv', header=None)[0].tolist()
-
+# drug_ren = pd.read_csv('text_files/drug_list_ren.csv', header=None)[0].tolist()
+# drug_son = pd.read_csv('text_files/drug_list_sonpatki.csv', header=None)[0].tolist()
+drug_per_sample_ren = load_pickle('text_files/drug_per_sample_ren.pkl')
+drug_per_sample_son = load_pickle('text_files/drug_per_sample_sonpatki.pkl')
+drug_per_sample_ravi = load_pickle('text_files/drug_per_sample_ravi.pkl')
 a, b = st.columns(2)
 
 tabs_font_css = """
@@ -58,13 +60,24 @@ option = a.selectbox(
     key=persist("sample_id")
 )
 
-# Choose gene list based on which dataset the sample belongs to
+# # Choose gene list based on which dataset the sample belongs to
+# if option in samples_ren:
+#     drug_options = drug_ren
+# elif option in samples_son:
+#     drug_options = drug_son
+# else:
+#     drug_options = drug_ravi
+
 if option in samples_ren:
-    drug_options = drug_ren
+    drug_options = drug_per_sample_ren.get(option, [])
 elif option in samples_son:
-    drug_options = drug_son
+    drug_options = drug_per_sample_son.get(option, [])
 else:
-    drug_options = drug_ravi
+    drug_options = drug_per_sample_ravi.get(option, [])
+
+if not drug_options:
+    st.warning(f"No drug list available for sample {option}.")
+
 
 option2 = b.selectbox(
     'Drug',
