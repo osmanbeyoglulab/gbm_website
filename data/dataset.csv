@@ -1,8 +1,8 @@
 Sample-ID,Region,IDH-status,Grade,MGMT-status,Location,Sex,Age,Category
-UKF243,core,IDH WT,NA,NA,frontal,F,55,Discovery
+UKF243,tumor,IDH WT,NA,NA,frontal,F,55,Discovery
 UKF248,tumor,IDH WT,NA,NA,frontal,M,44,Discovery
 UKF251,tumor,IDH WT,NA,NA,temporal,M,61,Discovery
-UKF255,core,IDH WT,NA,NA,temporal,F,81,Discovery
+UKF255,tumor,IDH WT,NA,NA,temporal,F,81,Discovery
 UKF259,tumor,IDH WT,NA,NA,temporal,F,75,Discovery
 UKF260,tumor,IDH WT,NA,NA,temporal,M,81,Discovery
 UKF266,tumor,IDH WT,NA,NA,temporal,F,76,Discovery
@@ -10,7 +10,7 @@ UKF269,tumor,IDH WT,NA,NA,occipital,M,51,Discovery
 UKF275,tumor,IDH WT,NA,NA,frontal,F,80,Discovery
 UKF296,tumor,IDH WT,NA,NA,temporal,M,34,Discovery
 UKF304,tumor,IDH WT,NA,NA,temporal,M,81,Discovery
-UKF313,core,IDH WT,NA,NA,temporal,M,57,Discovery
+UKF313,tumor,IDH WT,NA,NA,temporal,M,57,Discovery
 UKF334,tumor,IDH WT,NA,NA,frontal,F,73,Discovery
 MGH258,bulk,IDH WT,4,methylated,left frontal,F,43,Discovery
 ZH881inf,inf,IDH WT,4,partially methylated,right temporal,M,79,Discovery
