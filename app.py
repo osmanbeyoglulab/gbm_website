@@ -387,7 +387,7 @@ st.markdown(
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        padding: 0.25rem 0.5rem;
+        padding: 0.25rem 0.5rem 0.85rem 0.5rem;   /* 3rd value = space below the header */
         margin: 0.25rem 0 0 0;
     }
 
