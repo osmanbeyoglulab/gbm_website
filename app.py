@@ -129,15 +129,42 @@ citation_page = st.Page(
 # -- NAVIGATION --
 
 
+# pg = st.navigation(
+#     {
+#         "": [home_page, datasets_page],
+#         "Analysis of Individual Samples": [metaprogram_page, gene_page, s_tf_page, s_pathway_page , drug2cell_page, metaprogram_feature_page],
+#         "Comparison Across Samples": [mp_specific_page,  discovery_correlation_page,  validation_correlation_page, comb_correlation_page], 
+#         "Resources": [citation_page, contact_page]
+#     },
+# )
+
+# Register all pages, but hide Streamlit's built-in menu so we can draw our own
 pg = st.navigation(
-    {
-        "": [home_page, datasets_page],
-        "Analysis of Individual Samples": [metaprogram_page, gene_page, s_tf_page, s_pathway_page , drug2cell_page, metaprogram_feature_page],
-        "Comparison Across Samples": [mp_specific_page,  discovery_correlation_page,  validation_correlation_page, comb_correlation_page], 
-        "Resources": [citation_page, contact_page]
-    },
-    position="top",
+    [
+        home_page, datasets_page,
+        metaprogram_page, gene_page, s_tf_page, s_pathway_page, drug2cell_page, metaprogram_feature_page,
+        mp_specific_page, discovery_correlation_page, validation_correlation_page, comb_correlation_page,
+        citation_page, contact_page,
+    ],
+    position="hidden",
 )
+
+# Custom left-hand menu: five top-level items
+with st.sidebar:
+    st.page_link(home_page, label="Home", icon=emoji)
+    st.page_link(datasets_page, label="Dataset Explorer", icon=emoji)
+
+    with st.expander("Analysis of Individual Samples", icon=emoji, expanded=True):
+        for p in [metaprogram_page, gene_page, s_tf_page, s_pathway_page, drug2cell_page, metaprogram_feature_page]:
+            st.page_link(p)
+
+    with st.expander("Comparison Across Samples", icon=emoji, expanded=True):
+        for p in [mp_specific_page, discovery_correlation_page, validation_correlation_page, comb_correlation_page]:
+            st.page_link(p)
+
+    with st.expander("Resources", icon=emoji, expanded=True):
+        for p in [citation_page, contact_page]:
+            st.page_link(p)
 
 pg.run()
 
