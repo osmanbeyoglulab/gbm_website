@@ -381,6 +381,23 @@ st.markdown(
     section[data-testid="stSidebar"] [data-testid="stSidebarHeader"] button {
         display: none !important;
     }
+
+    /* section headers: same left padding as the page links, so icons line up */
+    .menu-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.25rem 0.5rem;
+        margin: 0.25rem 0 0 0;
+    }
+
+    /* same font for all five top-level items */
+    .menu-header,
+    .st-key-menu_top [data-testid="stPageLink-NavLink"] p,
+    .st-key-menu_top [data-testid="stPageLink-NavLink"] span {
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -401,7 +418,8 @@ pg = st.navigation(
 
 
 def menu_section(title, pages):
-    st.markdown(f"{emoji} **{title}**")
+    st.markdown(f'<div class="menu-header"><span>{emoji}</span><span>{title}</span></div>',
+                unsafe_allow_html=True)
     _, col = st.columns([0.08, 0.92])        # indent the second level
     with col:
         for p in pages:
@@ -409,8 +427,9 @@ def menu_section(title, pages):
 
 
 with st.sidebar:
-    st.page_link(home_page, label="Home", icon=emoji)
-    st.page_link(datasets_page, label="Dataset Explorer", icon=emoji)
+    with st.container(key="menu_top"):     # key lets the CSS style these two links
+        st.page_link(home_page, label="Home", icon=emoji)
+        st.page_link(datasets_page, label="Dataset Explorer", icon=emoji)
 
     menu_section("Analysis of Individual Samples",
                  [metaprogram_page, gene_page, s_tf_page, s_pathway_page, drug2cell_page, metaprogram_feature_page])
