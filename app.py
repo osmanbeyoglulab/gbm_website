@@ -387,8 +387,13 @@ st.markdown(
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        padding: 0 0.5rem 0.85rem 0.5rem;   /* 1st value = space above, 3rd value = space below */
+        padding: 0 0.5rem 0.35rem 0.5rem;   /* 1st value = space above, 3rd value = space below */
         margin: 0;
+    }
+
+    /* tighter spacing between second-level pages */
+    [class*="st-key-menu_sub_"] {
+        gap: 0.5rem !important;
     }
 
     /* same font for all five top-level items */
@@ -421,7 +426,8 @@ def menu_section(title, pages):
     st.markdown(f'<div class="menu-header"><span>{emoji}</span><span>{title}</span></div>',
                 unsafe_allow_html=True)
     _, col = st.columns([0.08, 0.92])        # indent the second level
-    with col:
+    key = "menu_sub_" + "".join(c for c in title.lower() if c.isalnum())
+    with col, st.container(key=key):          # key lets the CSS tighten spacing
         for p in pages:
             st.page_link(p, icon=sub_icon)
 
