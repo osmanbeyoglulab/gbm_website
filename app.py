@@ -200,21 +200,39 @@ pg = st.navigation(
     position="hidden",
 )
 
+# with st.sidebar:
+#     st.page_link(home_page, label="Home", icon=emoji)
+#     st.page_link(datasets_page, label="Dataset Explorer", icon=emoji)
+
+#     with st.expander("Analysis of Individual Samples", icon=emoji, expanded=True):
+#         for p in [metaprogram_page, gene_page, s_tf_page, s_pathway_page, drug2cell_page, metaprogram_feature_page]:
+#             st.page_link(p, icon=sub_icon)
+
+#     with st.expander("Comparison Across Samples", icon=emoji, expanded=True):
+#         for p in [mp_specific_page, discovery_correlation_page, validation_correlation_page, comb_correlation_page]:
+#             st.page_link(p, icon=sub_icon)
+
+#     with st.expander("Resources", icon=emoji, expanded=True):
+#         for p in [citation_page, contact_page]:
+#             st.page_link(p, icon=sub_icon)
+
+def menu_section(title, pages):
+    st.markdown(f"{emoji} **{title}**")
+    _, col = st.columns([0.08, 0.92])        # indent the second level
+    with col:
+        for p in pages:
+            st.page_link(p, icon=sub_icon)
+
 with st.sidebar:
     st.page_link(home_page, label="Home", icon=emoji)
     st.page_link(datasets_page, label="Dataset Explorer", icon=emoji)
 
-    with st.expander("Analysis of Individual Samples", icon=emoji, expanded=True):
-        for p in [metaprogram_page, gene_page, s_tf_page, s_pathway_page, drug2cell_page, metaprogram_feature_page]:
-            st.page_link(p, icon=sub_icon)
-
-    with st.expander("Comparison Across Samples", icon=emoji, expanded=True):
-        for p in [mp_specific_page, discovery_correlation_page, validation_correlation_page, comb_correlation_page]:
-            st.page_link(p, icon=sub_icon)
-
-    with st.expander("Resources", icon=emoji, expanded=True):
-        for p in [citation_page, contact_page]:
-            st.page_link(p, icon=sub_icon)
+    menu_section("Analysis of Individual Samples",
+                 [metaprogram_page, gene_page, s_tf_page, s_pathway_page, drug2cell_page, metaprogram_feature_page])
+    menu_section("Comparison Across Samples",
+                 [mp_specific_page, discovery_correlation_page, validation_correlation_page, comb_correlation_page])
+    menu_section("Resources",
+                 [citation_page, contact_page])
 
 pg.run()
 
