@@ -12,7 +12,7 @@ from style import define_layout
 st.set_page_config(
         page_title='GBM',
         page_icon= "./logo/gbm_ribbon.png",
-        initial_sidebar_state="expanded",
+        initial_sidebar_state="collapsed",   #"expanded",
         # layout="wide" 
 )
 
@@ -135,7 +135,8 @@ pg = st.navigation(
         "Analysis of Individual Samples": [metaprogram_page, gene_page, s_tf_page, s_pathway_page , drug2cell_page, metaprogram_feature_page],
         "Comparison Across Samples": [mp_specific_page,  discovery_correlation_page,  validation_correlation_page, comb_correlation_page], 
         "Resources": [citation_page, contact_page]
-    }
+    },
+    position="top",
 )
 
 pg.run()
